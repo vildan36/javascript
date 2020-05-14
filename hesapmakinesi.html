@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset=utf-8" />
+    <title>Hesap Makinesi</title>
+    <script>
+     function sil() {
+     document.form.text.value="";
+        }
+       function tek_sil() {
+        var sonuc = document.form.text.value;
+         document.form.text.value = sonuc.substring(0,sonuc.length-1);
+        
+        function ekle(sayi) {
+            document.form.text.value = document.form.text.value + sayi;
+       }
+        function esittir() {
+            var sonuc = document.form.text.value;
+            if (sonuc){
+                document.form.text.value=eval(sonuc);
+         {
+  }           
+         }
+}
+    </script>
+    <style>
+       table{
+           width:275px;
+           font-size:24px;
+           border:5px solid white;
+           border-radius:10px;
+     }
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .islembuton{
+            width: 60px;
+            height: 50px;
+            font-size: 24px;
+            margin: 3px;
+            cursor: pointer;
+            background:#CD853F;
+            border: none;
+            color: white;
+        }
+    .sayibuton{
+            width: 60px;
+            height: 45px;
+            font-size: 24px;
+            margin: 3px;
+            cursor: pointer;
+            background:white;
+            border: none;
+            color:black;
+        }
+        .text{
+            width: 208px;
+            margin: 5px;
+            font-size: 25px;
+            padding: 5px;
+            border: none;
+            color: black;
+            text-align:right;
+        }
+
+
+        .ana{
+           position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%)translateY(-50%);
+        }
+      .background{
+             background: black;
+             height: 625px;
+        }
+    </style>
+   </head>
+   <body>
+   <div class="background">
+        <form class="ana">
+        </form>
+        </div>
+    <div class="ana">
+
+      <table>
+
+ <tr>  
+      <form name="form" action="">
+             <td colspan="5" >  <input class="text" style=" border: 2px solid  ; width: 315px" name="text" type="text"></td>    </tr>
+        <tr>
+    <td><button type="button" class="islembuton" onclick="document.form.text.value=sonuc =Math.abs(document.form.text.value) "value="abs">|x|</button></td>
+    <td> <button type="button" class="islembuton" onClick="document.form.text.value=sonuc =Math.exp(document.form.text.value) "value="e">e^</button></td>
+    <td><input class="islembuton" type="button" value="C" onclick="sil()"></td>
+    <td><input class="islembuton" type="button" value="<--" onclick="tek_sil()"></td> 
+    <td><button type="button" class="islembuton" onClick="document.form.text.value=sonuc =Math.log(document.form.text.value)"value="log">log</button></td>
+            </tr>
+            <tr>
+    <td><button type="button" class="islembuton" onClick="document.form.text.value=sonuc =Math.sqrt(document.form.text.value) "value="kök">kök</button></td>
+    <td><input class="islembuton" type="button" value="üs" onclick="ekle('**')"></td>
+    <td><input class="islembuton" type="button" value="%" onclick="ekle('%')"></td>
+    <td><input class="islembuton" type="button" value="/" onclick="ekle('/')"></td>
+    <td><button type="button" class="islembuton" onClick="document.form.text.value=sonuc =Math.cosh(document.form.text.value) "value="cosh">cosh</button></td>
+         
+         </tr>
+         <tr>
+     <td><input class="sayibuton" type="button" value="7" onclick="ekle(7)"></td>
+     <td><input class="sayibuton" type="button" value="8" onclick="ekle(8)"></td>
+     <td><input class="sayibuton" type="button" value="9" onclick="ekle(9)"></td>
+     <td><input class="islembuton" type="button" value="*" onclick="ekle('*')"></td>
+     <td><button type="button" class="islembuton" onClick="document.form.text.value=sonuc =Math.sinh(document.form.text.value) "value="sinh">sinh</button></td>
+
+
+            </tr>
+            <tr>
+
+      <td><input class="sayibuton" type="button" value="4" onclick="ekle(4)"></td>
+      <td><input class="sayibuton" type="button" value="5" onclick="ekle(5)"></td>
+      <td><input class="sayibuton" type="button" value="6" onclick="ekle(6)"></td>
+      <td><input class="islembuton" type="button" value="-" onclick="ekle('-')"></td>
+      <td><button type="button" class="islembuton" onClick="document.form.text.value=sonuc =Math.cos(document.form.text.value) "value="cos">cos</button></td>
+               
+            </tr>
+            <tr>
+    <td> <input class="sayibuton" type="button" value="1" onclick="ekle(1)"> </td>
+    <td> <input class="sayibuton" type="button" value="2" onclick="ekle(2)"> </td>
+    <td> <input class="sayibuton" type="button" value="3" onclick="ekle(3)"></td>
+    <td><input class="islembuton" type="button" value="+" onclick="ekle('+')"></td>
+    <td><button type="button" class="islembuton" onClick="document.form.text.value=sonuc =Math.sin(document.form.text.value) "value="sin">sin</button></td>
+             
+       
+            </tr>
+            <tr>
+             
+     <td > <input class="sayibuton" type="button" value="0" onclick="ekle(0)"> </td>
+     <td> <input class="sayibuton" type="button" value="." onclick="ekle('.')"> </td>
+     <td colspan="2"> <input class="islembuton" style="width: 129px" type="button" value="=" onclick="esittir('=')"></td>
+     <td><button type="button" class="islembuton" onclick="document.form.text.value=sonuc =Math.tan(document.form.text.value) "value="tan">tan</button></td>
+    </tr>
+</table>
+
+  </div>
+   </form>
+     </body>
+        </html> 
+
